@@ -1,0 +1,25 @@
+p, 
+li,
+h1 {
+    color: rgb(49, 27, 68);
+    font-size: 20px;
+}
+
+html {
+    background-color: bisque;
+}
+.blue{
+  color: blue;
+}
+.red{
+  color: red;
+}
+.orange{
+  color: orange;
+}
+.green{
+  color: green;
+}
+.google span {
+  font-size: 100px;
+}

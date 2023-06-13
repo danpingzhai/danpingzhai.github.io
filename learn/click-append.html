@@ -1,0 +1,55 @@
+<!-- 实现功能1：有一个 id 为 gallery 的 div，一开始里面是空的。设计一个按钮，每点击一次这个按钮，就在那个 div 中插入一张图片。 -->
+<!-- 实现功能2：点击变换图片 -->
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="gallery"></div>
+    
+    <img src="./imgs/array-concat.png" width="100" id="myimg">
+    <!-- onclick 属性后面填 javscript 函数名，是一个字符串（注意要带括号），
+    表示该元素被点击之后会执行这个javascript函数 -->
+    <button onclick="btnclick()">append</button>
+
+    <button onclick="testclick()">append</button>
+
+    <button onclick="enlarge_img()">enlarge</button>
+
+
+    <script>
+        function enlarge_img() {
+            var img = document.getElementById("myimg");
+            img.width = 10 + img.width;
+        }
+
+        function testclick() {
+            console.log('test click');
+        }
+
+        function btnclick() {
+            // 创建一个 img dom
+            // document.createElement 用来创建一个新的 DOM，
+            // 参数是新创建的 DOM 的标签类别，是一个字符串
+            // 比如创建一个 p 标签：document.createElement('p')
+            var img = document.createElement("img")
+            // 设置这个 img DOM 的 src 属性
+            img.src = "./imgs/array-concat.png"
+            // 获取 id 为 gallery 的 div 元素
+           var gallery = document.getElementById("gallery")
+            // 将这个 img DOM 追加（append）到 id 为 gallery 的 div 里
+            gallery.appendChild(img)
+
+            // 创建一个 p 标签和text content
+            var p = document.createElement("p");
+            var t = document.createTextNode("this is a text")
+            // 将 p 标签的内容设置为 “这是一段话”
+            p.appendChild(t)
+            p.style.fontSize = '100px';
+            p.style.color = 'red';
+            // 将p标签追加到 id 为gallery 的div里
+            gallery.appendChild(p)
+        }
+    </script>
+</body>
+</html>

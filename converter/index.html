@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+ <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<title>Converter</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<link href="../static/common.css" rel="stylesheet">
+<link href="../static/gallery.css" rel="stylesheet">
+<script src="/static/ga.js" async></script>
+<script type="text/javascript">
+    function mile_change() {
+        document.getElementById('km').value = 1.60934 * document.getElementById('mile').value
+    }
+    function feet_change() {
+        document.getElementById('meter').value = 0.3048 * document.getElementById('feet').value
+    }
+    function gallon_change() {
+        document.getElementById('liter').value = 3.78541 * document.getElementById('gallon').value
+    }
+    function mpg_change() {
+        var mpg = document.getElementById('mpg').value;
+        document.getElementById('l100km').value = 100 / (mpg * 1.60934 / 3.78541);
+    }
+</script>
+<style>
+    form {
+        width: 400px;
+    }
+    .unit-pair {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+    input {
+        width: 5em;
+        margin-right: 0.5rem;
+    }
+</style>
+</head>
+
+<body>
+<main class='container mb-5'>
+    <h1 style="text-align: center;">Unit Converter</h1>
+    <form>
+        <div class="unit-pair">
+            <label><input id='mile' type='text'  onchange="mile_change()">Mile</label> =
+            <label><input  id="km" type='text' >KM</label>
+        </div>
+
+        <div class="unit-pair">
+            <label><input id='feet' type='text'  onchange="feet_change()">Feet</label> =
+            <label><input  id="meter" type='text' >m</label>
+        </div>
+
+        <div class="unit-pair">
+            <label><input id='gallon' type='text'  onchange="gallon_change()">Gallon</label> =
+            <label><input  id="liter" type='text' >Liter</label>
+        </div>
+
+        <div class="unit-pair">
+            <label><input id='mpg' type='text'  onchange="mpg_change()">MPG</label> =
+            <label><input  id="l100km" type='text' >Liter per 100 km</label>
+        </div>
+        <button type="button" class="btn btn-primary">Convert</button>
+    </form>
+</main>
+</body>
+</html>

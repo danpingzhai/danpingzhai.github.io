@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="author" content="Kai ZHAO">
+
+<link rel="shortcut icon" href="https://static.kaizhao.net/favicon.png">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://kaizhao.net/static/google-analytics.js" async></script>
+
+<title>Two-alternative Forced Choice</title>
+<script>
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    }
+
+    var total_num = 20;
+    var results = new Array(total_num).fill(-1);
+    console.log(results);
+    var index = 0;
+    var left_urls = new Array(total_num);
+    var right_urls = new Array(total_num);
+    for (let i=0; i<total_num; i++) {
+        left_urls[i] = "https://kaizhao.net/inpaint_fool_test/"+i.toString()+"_0.png";
+        right_urls[i] = "https://kaizhao.net/inpaint_fool_test/"+i.toString()+"_1.png";
+    }
+    console.log(left_urls)
+    window.onload = function() {
+        $("#progress-bar").css('width', (index+1)/total_num*100 + "%")
+    }
+    
+</script>
+
+</head>
+<body>
+    
+
+<main class="container mb-5">
+<h1 style="text-align: center; color: #539165;">Two-alternative Forced Choice</h1>
+
+<div id="display" class="container" style="width: 100%;">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6"><img src="https://kaizhao.net/inpaint_fool_test/0_0.png" style="width: 100%;" id="left-img" onclick="left_click()"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6"><img src="https://kaizhao.net/inpaint_fool_test/0_1.png" style="width: 100%;" id="right-img" onclick="right_click()"></div>
+    </div>
+    <div class="progress">
+        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <button class="btn btn-success" style="margin-top: 1em;" onclick="submit()">Submit</button>
+</div>
+</main>
+
+
+<script type="text/javascript">
+function left_click(p1, p2) {
+    results[index] = 0;
+    next();
+}
+
+function right_click(p1, p2) {
+    results[index] = 1;
+    next();
+}
+
+function next() {    
+    if (index == total_num-1) {
+        alert("All done!");
+        submit();
+    }
+    index = index + 1;
+    $("#left-img").attr("src", left_urls[index]);
+    $("#right-img").attr("src", right_urls[index]);
+    $("#progress-bar").css('width', (index+1)/total_num*100 + "%")
+}
+
+function submit() {
+    if (results.indexOf(-1) != -1) {
+        alert("Complete all the pairs before submission!");
+        return;
+    }
+    var output = "";
+    for (let i=0; i<total_num; i++) {
+        output += results[i].toString() + '\n';
+    }
+    download("results.txt", output);
+}
+</script>
+
+<div class="footer-copyright text-center py-3">Copyright © 2014-2023 <a style="text-decoration: none;" href="https://kaizhao.net/"> Kai Zhao</a></div>
+</body>
+</html>

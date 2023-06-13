@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<title>Miles Per Gallon</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/ac184e5064.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="/static/common.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5K4YCPS8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J5K4YCPS8B');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3922649388729274"
+     crossorigin="anonymous"></script>
+<style>
+@media only screen and (max-device-width: 480px) {
+    main {
+        padding: 0 .5em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<main class="container md-5">
+<div>
+    <canvas id="mpg"></canvas>
+</div>
+
+<script>
+const ctx = document.getElementById('mpg');
+
+var data = [
+    {
+        mileage: 158430,
+        gallon: 13.480,
+        date: 20230205
+    },
+    {
+        mileage: 158558,
+        gallon: 6.335,
+        date: 20230220
+    },
+    {
+        mileage: 158931,
+        gallon: 13.455,
+        date: 20230310
+    },
+    {
+        mileage: 159231,
+        gallon: 12.235,
+        date: 20230326
+    },
+    {
+        mileage: 159425,
+        gallon: 8.493,
+        date: 20230409
+    },
+    {
+        mileage: 160000,
+        gallon: 21.2,
+        date: 20230415
+    },
+    {
+        mileage: 160360,
+        gallon: 14.9,
+        date: 20230505,
+        station: 'chevron'
+    },
+]
+
+for(var i=1; i<data.length; i++) {
+    console.log((data[i].mileage - data[i-1].mileage) / data[i].gallon);
+    mpg.push((data[i].mileage - data[i-1].mileage) / data[i].gallon);
+    labels.push(data[i].date.toString());
+}
+console.log(mpg);
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: labels,
+    datasets: [{
+      label: 'MPG',
+      data: mpg,
+    }]
+  }
+});
+</script>
+
+</main>
+
+<div class="footer-copyright text-center py-3">© 2023 Copyright: 😘<a href="http://dpzhai.com" class="mya">dpzhai.com</a></div>
+
+</body>
+</html>

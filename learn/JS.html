@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>
+        JS TEST
+    </title>
+</head>
+<body>
+    <script>
+        var str1 = "apple";
+        var str2 = "from";
+        var str3 = "Fuji";
+        var result = str1.concat(str2,str3)
+        console.log(result);
+
+        var me = "apple";
+        var me2 = "from";
+        var m3 = "Fuji";
+        var result = me.concat(me2,m3)
+        console.log(result);
+
+        var me = "apple";
+        console.log(me.substring(2));//ple
+        console.log(me.substring(0,4))//appl
+        console.log(me.substring(2,4));//pl
+        console.log(me.substring(2,-3));//ap
+
+        var me = "apple";
+        console.log(me.substr(2));//ple
+        console.log(me.split(""));
+        console.log(me.split('|'));
+
+        var me = "apple";
+        console.log(me.indexOf("e"));//4
+        console.log(me.indexOf("h"));//不存在即为-1
+        console.log(me.indexOf("p",3));//-1
+        if(me.indexOf("p" > -1)){
+            console.log(me);
+        }
+    </script>
+    <script>
+        var arr = ["apple","is", "so", "sweet","!"];
+        var num = [10,20,];
+        var mix = [10,20,"string","account"];
+        var purenum = 10
+        console.log(arr.concat(num,mix,purenum));//['apple', 'is', 'so', 'sweet', '!', 10, 20, 10, 20, 'string', 'account', 10]
+
+        console.log(arr.length);
+        console.log(Array.isArray(arr));//true
+        console.log(typeof(arr));//object . type of不适用于array
+        console.log(Array.isArray(num));//true
+        console.log(Array.isArray(mix));//true
+        console.log(typeof(purenum));//number
+        console.log(Array.isArray(purenum));//false
+
+        var arr = ["apple","is", "so", "sweet","!"];
+        arr.push("cool")
+        console.log(arr);// ["apple","is", "so", "sweet","!","cool"]
+        arr.pop()
+        console.log(arr);
+
+        var arr = ["apple","is", "so", "sweet","!"];
+        var item 
+        arr.shift()
+        console.log(arr);
+        // while (item = arr.shift) {
+        //     console.log(item);
+        // }
+        arr.unshift("my","apple")
+        console.log(arr);
+
+        var array = ["my","pineapple","is", "so", "sweet","!"];
+        var result = array.join(' | ')
+        console.log(array.join(' '));// my pineapple is so sweet !
+        console.log(result);// my | pineapple | is | so | sweet | !
+
+
+    </script>
+
+    <script>
+        var me = "apple";
+        console.log(me.length);
+        console.log(me.charAt(4));//e
+        console.log(me.charAt(me.length - 1));//e print the last string
+    </script>
+    
+    <script>
+  
+        var num = 10;
+        console.log(num);
+        num++
+        console.log(num);
+        ++num;
+        console.log(num);
+        var name = "apple";
+        console.log(name);
+        var apple = "ubf";
+        var danping = apple;
+        var another_name = name;
+        
+        var sum = 0;
+        for (let i =1; i<100; i=i*2) {
+            console.log(i);
+            sum = sum + i;
+        }
+        console.log(sum);
+    </script>
+    <script>
+        // if语句:布尔表达式、if匹配规则，找最近的else; if else嵌套
+        var flag = true
+        if(!flag){
+            console.log("我是真的");
+        }
+
+        var lunch = false
+        if(!lunch){
+            console.log("yammy");
+        } else{
+            console.log("disgusting");
+        }
+        var eat = true
+        var food = "Beef" ;
+        if(eat){
+            if(food = "beef"){
+                console.log("beef");
+            }else{
+                console.log("chicken");
+            }
+        }else{
+            console.log("no lunch");
+        }
+        var day = 5;
+        if (day ===1) {
+            console.log("Today is Monday");
+        }else if (day ===2) {
+            console.log("Today is Tuesday");
+        }else if (day ===3) {
+            console.log("Today is Wedsday");    
+        }else if (day ===4) {
+            console.log("Today is Thrsday");
+        }else if (day ===5) {
+            console.log("Today is Frisday");  
+        } 
+        // switch语句：每个case对应的Break不能缺少、相比较if语句更直观 ； 
+        var day = 3
+        switch (day) {
+            case 1:
+                console.log("Today is Monday");
+                break;
+            case 2:
+                console.log("Today is Tuesday");
+                break;
+            case 3:
+                console.log("Today is Wedsday");
+                break;
+            case 4:
+                console.log("Today is Thrsday");
+                break;
+            default:
+                console.log("Today is Friday");;
+        }
+        
+        // 三元运算符：（? : ）; if else的简化形式
+        var num = 7
+        if(num % 2 === 0){
+            console.log("偶数");
+        }else{
+            console.log("奇数");
+        }
+        // 三元运算符：
+        num % 2 === 0 ? console.log("偶数") : console.log("奇数");
+        // 三元运算符更简化形式：
+        var result = num % 2 === 0 ? "偶数" : "奇数";
+        console.log(result);
+       
+        // for循环语句:初始表达式、布尔表达式、循环体
+        for(var i = 1;i<=100;i++){
+            console.log(i);
+        }
+        // 输出所有小于变量X的值
+        var X = 10;
+        for(var i = X-1; i>0; i--){
+            console.log(i);
+        }
+        // 循环输出1-100之间数字之和
+        var sum = 0
+        for (var i=1; i<=100; i=i+1) {
+            sum=sum+i;
+        }
+        console.log(sum);
+
+        // 循环输出0-100的偶数和
+        sum = 0
+        for(var i=0; i<=100; i=i+1){
+            if (i % 2 != 0) {
+                sum = sum + i;
+            }
+        }
+        console.log(sum);
+        sum = 0
+        for(var i=0; i<=100; i=i+2){
+            if (i % 2 == 0) {
+                sum = sum + i;
+            }
+        }
+        console.log(sum);
+        // 循环输出0-100的奇数和
+        sum = 0
+        for(var i=1; i<=100; i=i+2)
+        {
+            sum = sum + i;
+            // console.log("i=" + i.toString() + ", sum=" + sum.toString());
+            console.log("i=" + i+ ", sum=" + sum.toString());
+        }
+        var sum = 0
+        for (var i = 0; i <= 100; i=i+1) {
+            if (i % 2 == 1){
+                sum = sum + i;
+                console.log(i, sum)
+            } 
+        }
+        console.log(sum);
+        // 字符串合并（concat 合并原来的字符串，形成新的字符串）
+        var str1 = "hello";
+        var str2 = "hello world";
+        var num = 2000
+        var result = str1.concat(str2,num)
+        console.log(result);
+
+        // 函数可以复用,调用function命令;函数中参数不同，得到的结果也不同； 
+        
+        function add(){
+            var a = Number(document.getElementById("a").value)
+            var b = Number(document.getElementById("b").value)
+            console.log(a + b);
+        }
+        // math.abs为参数绝对值
+         var num = 100
+         console.log(Math.abs(num));
+        console.log(Math.abs(-num));
+         
+        // Math.max/min 最大最小值
+        console.log(Math.max(10,80,40,20,99));
+
+        // Math.floor/ceil是数值向下/向上取整
+        var num = 10.9
+        console.log(Math.ceil(num));
+        console.log(Math.floor(num));
+
+        // 使用date console.log(Date.now(90))是时间戳;
+        console.log(Date.now(9));
+        console.log(new Date);
+        console.log(new Date(1679263799829).getDay());
+        var year = new Date(1679263799829).getFullYear()
+        var month = new Date(1679263799829).getMonth () +1
+        var date = new Date(1679263799829).getDate()
+        console.log(year + "-" + month + "-" + date);
+
+        var lastDate2023 = new Date("2023-12-31T23:59:59");
+        
+        var firstday2023 = new Date("2023-1-1 00:00:00");
+        console.log((Date.now() - firstday2023)/1000/3600/24);
+        console.log(new Date());
+
+        var now = new Date()
+        console.log((lastDate2023.getTime() - now.getTime()) / 1000 / 3600 / 24)
+        console.log((lastDate2023 - Date.now()) / 1000 / 3600 / 24)
+        // console.log(lastDate2023.getTime()); 
+        // console.log(lastDate2023);
+
+        function leftdays(params) {
+            
+        }
+   
+    </script>
+
+    <p id="para">this is a colorful sentence</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+    <button onclick="changeColor('purple');">purple</button>
+    <script>
+         function changeColor(newcolor){
+            const elem = document.getElementById("para")
+            elem.style.color = newcolor
+        }
+    </script>
+    <!-- <div class="div">bar</div> -->
+    <script>
+        var text = document.createElement("section")
+        console.log(text);
+
+        var content = document.createTextNode("STRING")
+        // console.log(content);  
+        text.appendChild(content);
+        console.log(text);
+
+        var id = document.createAttribute("id")
+        id.value = "class"
+        text.setAttributeNode(id)
+        console.log(text);
+        
+    </script>
+    <div class="box" id="box"> </div>
+    <script>
+        var box = document.getElementById("box")
+        box.setAttribute("style","width:300px;height:100px;background:purple")
+        box.style.cssText = "width:30px;height:90px;background:green"
+        console.log(box);
+    </script>
+
+        <!-- HTML事件处理 -->
+    <div id="div">
+        <button id="btn1" onclick="demo()">button</button>
+     </div>
+    <script>
+        function demo(){
+            console.log("button time");
+        }
+    </script>
+        <!-- DOM0级事件处理 -->
+    <button id="btn2">button2</button>
+     <script>
+        var btn = document.getElementById("btn2")
+        btn.onclick = function(){
+            console.log(btn);
+        }
+     </script>
+     <!-- DOM2级事件处理 -->
+    <button id="btn3">button3</button>
+    <script>
+        var btn3 = document.getElementById("btn3")
+        btn3.addEventListener("click",function(){
+            console.log(btn3);
+        })        
+    </script>
+    <button id="btn4">button click</button>
+    <script>
+        var btn4 = document.getElementById("btn4")
+        btn4.onclick = function(){
+            console.log("one cliack");
+        }
+    </script>
+      <button id="btn5">button double click</button>
+      <script>
+          var btn5 = document.getElementById("btn5")
+          btn5.ondblclick = function(){
+              console.log("double click");
+          }
+      </script>
+       <button id="btn6">button down click</button>
+       <script>
+           var btn6 = document.getElementById("btn6")
+           btn5.onmousedown = function(){
+               console.log("down cliack");
+           }
+       </script>
+       <!-- event 事件之键盘事件 ：keydown keyup keypress-->
+          <input type="text" id="username">
+          <script>
+            var username = document.getElementById("username")
+            username.onkeydown = function(){
+                console.log("hey");
+            }
+          </script>
+           <input type="text" id="username2">
+        <script>
+            var username = document.getElementById("username2")
+            username.onkeyup = function(){
+                console.log("hey!");
+            }
+        </script>
+           <input type="text" id="username3">
+        <script>
+            var username = document.getElementById("username3")
+            username.setAttribute("style","width:20px;background:purple")
+            username.onkeypress = function(){
+                console.log("hey!?");
+            }
+        </script>
+
+
+    <!-- event事件类型之表单事件 -->
+        <input type="text" id="username4">
+        <script>
+        var username = document.getElementById("username4")
+        username.oninput = function(e){
+        console.log(e.target.value);
+        }
+        username.onselect = function (e) {
+        console.log("e.print");
+        }
+        </script>
+
+
+        <!-- 数组扩展:(类数组,伪数组,只能使用数组的读取方式和length属性,不能使用数组方法:push) -->
+        <!-- array.from -->
+        <script>
+            function add(){
+                console.log(arguments);
+            }
+            add(90,80.100)
+
+            function getpoint() {
+                var x = 10.23;
+                var y = 23.34;
+                return {x,y}
+                
+            }
+            console.log(getpoint().x,getpoint().y);
+                
+            var lb = "luohuabinfen"
+            var user = {
+                [lb]:"xiaoqiaoliushui,renjianfangfei,python",
+                age:15
+            }
+            console.log(user);
+
+            // 赋值方式声明函数
+            var fn0 = function(x,y){
+                return x + y
+            }
+            // 箭头函数 =>
+            var fn = (x,y) => x+y
+            console.log(fn(30,79));
+
+        </script>
+
+        <!-- <script>
+            function loadimageasync(url){
+                const promise = new Promise(function(resolve, reject) => {
+                  const image = new Image();  
+                })
+
+            }
+        </script> -->
+              
+
+    <script>
+        // find all primes between 1 and 1000
+        var n = 1000;
+        var primes = [];
+        for (var i=1; i<=n; i++) {
+            // we presume every number is a prime by default
+            var is_prime = true;
+            for (var j=2; j <= i-1; j++) {
+                // i is dividable by j
+                if (i % j == 0) {
+                    // console.log(i + " is " + " divideable " + " by " + j)
+                    is_prime = false;
+                    // break the inner loop
+                    break
+                }
+            }
+            if (is_prime) {
+                primes.push(i);
+            }
+        }
+        console.log('primes: ', primes);
+        // done
+
+       
+    </script>
+    ES5的表现形式
+    <!-- ES6的表现形式 -->
+    <!-- class基本语句、属性和方法 -->
+     <!-- 实例属性 -->
+    
+     <!-- 静态属性 -->
+     <script>
+        
+     </script>
+    <!-- "new"命令必须存在 -->
+    <script>
+        class person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;  
+            }
+            getName(){
+                console.log(this.name);
+                console.log(this.age);
+            }  
+        }
+        var p = new person("baby",20)
+        p.getName();
+    </script>
+
+
+</body>
+</html>

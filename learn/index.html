@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<title>Way to frontend developer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.x/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.x/dist/js/bootstrap.min.js"></script>
+
+<link href="../static/common.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5K4YCPS8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J5K4YCPS8B');
+</script>
+
+<style>
+code {
+    padding: 0 0.2em;
+    border-radius: 3px;
+    background-color: #BCCEF8;
+    transition: background-color 0.5s ease-in-out;
+}
+code:hover {
+    background-color: #CDFCF6;
+}
+
+section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    /* background-color: #EDEDED; */
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+section:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+section h1 {
+    text-align: center;
+}
+.fix h2{
+    font-weight: 700;
+    color: #FF731D;
+    text-align: center;
+}
+section >p,li{
+    font-size: 20px;
+    line-height: 2em;
+}
+#form {
+    line-height: 20px;
+}
+#form input {
+    margin-top: 1rem;
+}
+.solid-tr td {
+    border-bottom: 1px solid black;
+}
+td, th {
+    text-align: center;
+}
+td {
+    border-bottom: 1px dashed black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 100px;
+    height: 3em;
+}
+th{
+   border: 2px solid black;
+}
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.name {
+    font-family: Tangerine;
+    color: #227C70;
+    font-weight: 800;
+    margin-right: 2px;
+
+}
+#css li {
+    font-size: 16px;
+    color: #E97777;
+}
+.box1{
+    width: 20px;
+    height: 60px;
+    border-top: 120px solid pink; 
+    border-right: 80px solid skyblue;
+    border-bottom: 80px solid purple;
+    border-left: 50px solid green;
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#resources">Resources</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#git">Git</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#directories">Directories</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#commands">Commands</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            </li> -->
+            <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+        </div>
+    </div>
+</nav>
+
+<main class='container mb-5'>
+<h1 style="text-align: center; color: #6C4AB6;">一定要学会 HTML!</h1>
+
+<p>
+My name is <span class="name">Danping Zhai</span> !
+</p>
+
+<a href="/">Back to my homepage</a>
+<section id="resources">
+    <h1>Resources 资源</h1>
+    <ul>
+        <li>Mozilla front-end developer: <a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer">https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer</a></li>
+        <li>Mozilla HTML: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">https://developer.mozilla.org/en-US/docs/Web/HTML</a></li>
+    </ul>
+</section>
+
+
+<section id="resources">
+    <h1>Linux 目录（directory）和常见目录操作命令</h1>
+    一些概念
+    <ul>
+        <li>
+            目录 (directory)：通俗的讲，一个目录对应着Windows中文件夹的概念，但其实更加广泛。
+        </li>
+        <li>
+            操作系统中的目录/文件夹/directory/ 是一级一级的，每一级目录直接用<code>/</code>隔开。比如有个目录叫 'my-folder'，它的下面有一个子目录叫 'sub-folder'，
+            那么子目录的路径就是 <code>my-folder/sub-folder</code>。
+        </li>
+        <li>
+            路径 path: 表示每一个文件/文件夹的“位置或者地址”。
+        </li>
+    </ul>
+
+    一些常见的 directory 和命令
+    <ul>
+        <li>
+            <span class="text-danger">非常重要</span> <code>./</code> 表示“当前工作目录”(working directory)。
+            你可以想象你正打开一个windows文件夹，那么此时的 <code>./</code> 就是你正在打开的这个文件夹。
+            在命令行(command line)中，当前目录<code>./</code> 就是你目前所处的目录位置。可以用 <code>pwd</code> (print working directory) 来打印出当前目录。
+        </li>
+        <li>
+            <code>~/</code> 表示“用户目录”，它不是一个实际存在的目录，而是一种快捷访问的方式。
+            <span class="text-info">
+                绝大部分（或者几乎所有）操作系统都是多用户的（虽然初级用户可能只有一个用户在使用）。每一个用户都有自己的“用户目录”。
+                以 Windows 操作系统为例，用户目录在 `C:/Users` 下，假设操作系统中有 zhangsan，lisi 等多个用户，那么他们的用户目录分别是
+                `C:/Users/zhangsan`, `C:/Users/lisi`。
+                假设现在是 zhangsan 登录进了这个操作系统，那么他的用户目录 `~/` 就是 `C:/Users/zhangsan`。
+                所以说 `~/` 这个目录并不是实际存在的一个目录，而是快捷访问 `/home/zhangsan` 的一种方式。
+            </span>
+            在很多操作系统中用户目录下都有 "Desktop（桌面）"，“Document（文档）”，“Pictures（图像）”等子目录，这些子目录的路径
+            就是<code>~/Desktop</code>, <code>~/Document</code>, <code>~/Pictures</code>等等。
+        </li>
+        <li>
+            <code>cd</code> 命令用来切换 working directory (<span class="text-danger">非常重要</span> )。
+            <code>cd</code> 命令后面接一个参数，表示你想切换到的目标路径。
+            比如 <code>cd ~/</code> 切换到的“用户目录”。
+        </li>
+        
+        <li>
+            比如说在很多操作系统中用户目录下都有 "Desktop（桌面）"，“Document（文档）”，“Pictures（图像）”等子目录，这些子目录的路径
+            就是<code>~/Desktop</code>, <code>~/Document</code>, <code>~/Pictures</code>等等。
+        </li>
+    </ul>
+</section>
+<script>
+    function changebackgroundcolor(green){
+        const elem = document.getElementById("resources")
+        elem.style.color=green
+    }
+</script>
+
+
+<section id="resources">
+    <h1>代码在哪儿</h1>
+    <p>
+        整个网站 <a href="/learn">https://dpzhai.com</a> 的代码在 <code>~/Code/danpingzhai.github.io/</code>, <a href="/learn">https://dpzhai.com/learn</a> 对应的代码在<code>~/Code/danpingzhai.github.io/learn</code>
+        每次打开 terminal (黑框命令行) 之后: 
+    </p>
+    <ol>
+        <li><code>cd ~/Code/danpingzhai.github.io/</code> cd 到网站代码目录</li>
+        <li><code>code .</code> 用 vscode 打开当前目录</li>
+        <li><code>~/</code>是 home 目录，在 windows 系统中就是 <code>C:/Users/your-user-name</code></li>
+    </ol>
+    <p>
+        或者也可以直接 <code>code ~/Code/danpingzhai.github.io/</code>. 
+    </p>
+    <ul class="text-danger">
+        <li>在命令行输入命令时经常按 Tab 自动补全; </li>
+        <li>除非特别只编辑一个文件, 用  code 命令打开时<strong>打开整个目录</strong>. </li>
+    </ul>
+</section>
+
+    
+<section id="git"> 
+    <h1>使用 Git</h1>
+    <p>
+        新建/修改文件之后三部提交到github: 
+        <ol>
+            <li><code>git add file-to-add</code></li>
+            <li><code>git commit -m 'commit message'</code></li>
+            <li><code>git push</code>: push to remote (github.com)</li>
+        </ol>
+    </p>
+</section>
+
+<section id="commands">
+    <h1 >Linux commands</h1>
+    <p>
+        一般一个完整的命令 (command) 由“命令名”, “options” 和“参数”组成, 
+        一般 options 都以“-”开头. 
+        有的命令不需要 options, 有的命令既不需要 option, 也不需要 argument. 
+    </p>
+    <p style="text-align: center; font-size: 1.2em;">
+        <span style="color:#1746A2">command</span> <span style="color: #FF731D;">-options</span> <span style="color: #B73E3E">arguments</span>
+    </p>
+    <p>
+        例如, 删除一个名字叫 "photos" 的<b>目录</b>所需的命令为<code>rm -r photos</code>, 其中
+        <ol>
+        <li><code>rm</code>为命令名, rm命令用于删除文件或目录; </li>
+        <li><code>-r</code> 为 option, 表示“recursive”, 如果要删除目录, 需用此option; </li>
+        <li><code>photos</code> 为“argument”, 指被删除的目录名字. </li>
+        </ol>
+        又例如, 删除一个名字叫 "photos.jpg" 的<b>文件</b>所需的命令为<code>rm  photos.jpg</code>, 这个命令不需要 options. 
+        用于打印当前的工作路径的命令为<code>pwd</code>, 这个命令既没有option, 有没有 argument. 
+    </p>
+    <h2>常用的命令</h2>
+    <p>
+        <ul>
+            <li><code>cd</code>: <span>change directory</span></li>
+            <li><code>cp</code>: <span> `cp source-file.xx target-file.xx`</span></li>
+            <li><code>rm</code>: <span> romove</span> </li>
+            <li><code>ls</code>: <span> list all files under current directory</span> </li>
+            <li><code>pwd</code>: <span> print working directory</span> </li>
+            <li><code>mkdir</code>:<span style="color:blueviolet">"make directory"</span> </li>
+        </ul>
+    </p>
+</section>
+
+
+<section id="directories">
+    <h1>Directories</h1>
+    <h2>special directories</h2>
+    <p>
+        <ul>
+            <li>~ : user home directory</li>
+            <li>. :current directory</li>
+            <li>.. :上级目录</li>
+            <li>/ : root directory</li>
+        </ul>
+    </p>
+    <h2>absolute dir and relative dir</h2>
+    <p>
+        以<code>/</code> 开头的是绝对路径, 否则为相对路径. 
+    </p>
+</section>
+
+
+<section>
+    <h1>👻 HTML Tags</h1>
+    &#9001tag-name <span style="color: green;">attribute</span>=<span style="color:blue;">value</span>&#9002
+        <span style="color: #E97777">content</span>
+    &#9001/tag-name&#9002
+    <h2>Tags</h2>
+    <p>
+        典型的 html tags 有 <code>p</code>, <code>h1, h2, h3</code>,
+        <code>span</code>, <code>section</code>,
+        <code>img</code>. 
+        一个 tag 由 <tag-name> 开头, 以 </tag-name> 结束, 
+        第一个叫 opening tag, 第二个为 closing tag. 
+        绝大部分 tags 都需要 closing tag, 有少数 tags 只需要 opening tag (例如 img). 
+    </p>
+
+    <div>
+        <h2>tag display</h2>
+        <ul>
+            <li>block-level:<code>h</code>、<code>p</code>、<code>div</code>、<code>ul</code>、<code>ol</code>、<code>li</code>,独占一行,height、weight和margin、padding均可控制;文字类tag中不能放block-level(p中不能放div);</li>
+            <li>inline-level:<code>a</code>、<code>span</code>、<code>strong</code>、<code>b</code>、<code>em</code>、<code>i</code>、<code>del</code>、<code>s</code>、<code>ins</code>、<code>u</code>;一行可以显示多个；直接设置高宽无效,默认宽度是内容宽度;行内元素只能放文本或其他行内元素;</li>
+            <li>inline-block:<code>img</code>、<code>input</code>、<code>td</code>和相邻元素在一行上,中间会有空白缝隙,一行可以显示多个;default weight是内容本身的weight;height、margin、padding都可以控制</li>
+        </ul>
+        <p>
+            change to different display: <code>display:inline </code>、<code>display:block</code>、<code>display:inline-block</code>
+        </p>
+    </div>
+</section>
+
+<section>
+    <h1>Cascaded Style Sheet</h1>
+    <p>There are three types of CSS:</p>
+    <ol>
+        <li><span class="text-danger">Inline</span>: styles defined by 'style' attribute of an element inside the open tag of the element. Example: <code>&#10092p style='font-size: 2rem;'&#10093 xxxx &#10092/p&#10093</code> </li>
+        <li><span class="text-danger">internal</span>: styles defined inside <code>&#10092style&#10093 &#10092/style&#10093</code>in the head of a HTML document.</li>
+        <li><span class="text-danger">external</span>: defined in a seperate .css file and is linked into a HTML document.</li>
+    </ol>
+
+    <p>
+        选择器
+        <ul>
+            <li>标签选择器, 选择标签</li>
+            <li>类选择器: 在css里通过 <code>.class-name {}</code> (注意有个点) 定义, 在 html 元素中用 <code>class='class-name'</code>. </li>
+            <li>id 选择器: 在css里通过 <code>#myid {}</code> (注意有个 #) 定义, 在 html 元素中用 <code>id='myid'</code>. </li>
+            <li>其它的</li>
+        </ul>
+    </p>
+</section>
+
+<a href="http://safd"> whatever</a>
+<a href="http://youtube.com">something</a>
+
+
+<span style="border: 1px solid blue;">这是第一个span</span>
+<span style="border: 1px solid blue;">这是第二个span</span>
+<span style="border: 1px solid blue;">这是第三个span</span>
+
+
+<div style="width: 200px; height: 2em; border: 1px solid red;">
+    这是第一个 div
+</div>
+
+<div style="width: 200px; height: 2em; border: 1px solid red;">
+    这是第二个 div
+</div>
+<div style="width: 200px; height: 2em; border: 1px solid red;">
+    这是第三个 div
+</div>
+
+<section>
+    <div>
+        <h1 style="font-size: 30px;margin-top: 1em;text-align: center;">tag learning summery</h1>
+        <ul>
+            <li>The difference between span and div:
+                <span style="color: #6C4AB6;">
+                    <b>
+                        span 是 inline 元素，一行可以有多个(span),
+                    </b>
+                </span>
+                <br/>
+                <strong>
+                    div 是block元素,一行只能有一个(div)。
+                </strong>  (even we have seperate another line in visual editor ) 
+            </li>
+            <li><code>img attribute</code>: <img src="imgs/starnight.webp" title="star paintting" alt="vongh" style="height: 150px;"></li>
+            <li>text Tags: <strong>strong & b、del、em、hr、br</strong></li>
+            <li><code>hyper reference</code>*4:
+                <br/>
+                <b><a href="http://kaizhao.net">①test website</a></b>
+                <br/>
+                ②img hyper reference  <a href="img" >img hyper reference:voghn</a>
+                <br/>
+                ③blank hyper reference   <a href="#">blank hyper reference uses #:</a>
+            </li>
+            <li>
+                <b>create table </b>
+                <ol>
+                    <li >
+                        <code>table、th、tb、tr</code> 
+                    </li>
+                    <li >
+                        <code>attribute style</code> :border、width、height、solid、 color、text-allign
+                    </li>
+                    <li>
+                        <code>list catageory</code>: ul、ol、dl (dt、dd)  
+                    </li>
+                </ol>
+                <table >
+                    <caption style="caption-side: top; text-align: center;">family tree</caption>
+                    <tr> 
+                        <th>name</th>
+                        <th>gender</th>
+                        <th>age</th>
+                    </tr>
+                    <tr>
+                        <td>apang</td>
+                        <td>female</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>akai</td>
+                        <td>male</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>akai</td>
+                        <td>male</td>
+                        <td>22</td>
+                    </tr>
+                    <tr class="solid-tr">
+                        <td>akai</td>
+                        <td>male</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>apang</td>
+                        <td>female</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>apang</td>
+                        <td>female</td>
+                        <td>18</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="fix" id="form">
+    <h2 >Form Summary</h2>
+    <p>
+        asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd
+        asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd
+        asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd
+        asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd asfdasfdasfdasfdasfdasfdasfdasfdasfdasfd
+    </p>
+    <div>
+        <form action="" method="get">
+            <code>input</code> has different types:<em><strong>text、password、date、radio、checkbox、button、submit、reset、select、upload</strong></em><br>
+            username: <input type="text" name="username"><br>
+            password: <input type="password"><br>
+            date of birth: <input type="date"><br>
+            gender: female<input type="radio" name="gender"> male <input type="radio" name="gender"><br>
+            hobby:checked: <input type="checkbox"> hikeing<input type="checkbox" name="hobby">singing<input type="checkbox" name="hobby"><br>
+            code: <input type="button" value="get code">diferent with submit <br>
+            <!-- 普通按钮需要value值, submit按钮不需要value值-->
+            <!--图片提交按钮, 必须包含src属性-->
+            <!--name用来区分不同的input -->
+            submit:<input type="submit" value="submit"><br>
+            reset: <input type="reset" value="reset"><br>
+            upload file: <input type="file">
+            <br>
+            <input type="checkbox">agree term& condition<br>
+            select: state
+            <select>
+                <option>state</option>
+                <option>CA</option>
+                <option>FL</option>
+            </select>
+            <select>
+                <option>city</option>
+                <option>Mar Vista</option>
+                <option>Culver City</option>
+            </select>
+            <select>
+                <option>adress</option>
+                <option>3320 Sawtelle blvd</option>
+                <option>3322 Sawtelle blvd</option>
+            </select>
+            <br>
+            <code>textarea</code><textarea>form表单域 </textarea>
+        </form>
+        <div>
+            <code>lable标签</code>: 增强输入敏感区域, 两种使用: 
+            <ol>
+            <li><label>username:<input type="text"></label></li>
+            <li><label for="id">nick</label> <input type="text" id="id"></li>
+            </ol>
+     </div>
+</section>
+    <hr>
+    <div>
+        <h6 style="display: pink;">practice part</h6>
+        <table style="text-align: center;" width="800" >
+            <caption>self-information</caption>
+            <tr>
+                <td>gender</td>
+                <td><input type="radio" name="gender"> male <input type="radio" name="gender"> female</td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td> <input type="time"><br></td>
+            </tr>
+            <tr>
+                <td>region</td>
+                <td> <input type="text" value="beijing" style="color: gray;"> beijing<br></td>
+            </tr>
+            <tr>
+                <td>state</td>
+                <td>state <input type="radio" name="state"> single <input type="radio" name="state"> divorce <input type="radio" name="state"> married<br></td>
+            </tr>
+            <tr>
+                <td>favorite type</td>
+                <td><input type="checkbox"> embraced <input type="checkbox"> tender <input type="checkbox"> six pack<br></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<section class="fix" id="css">
+    <h2 style="text-align: center;margin-top: 1em;font-weight: 700;">CSS General summary</h2>
+    <p>
+        <ul>
+            添加css的三种方式:
+            <li>inline是在tag里直接添加;</li>
+            <li>under head, add <code>style</code> </li>
+            <li>external是html文件和另外的css中建立外部链接,进行添加.</li>
+        </ul>
+        <table class="table">
+            <caption>四种标签选择器</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>选择器种类</th>
+                    <th>选择范围</th>
+                    <th>应用</th>
+                </tr>
+            </thead>
+          
+            <tr>
+                <td>标签选择器</td>
+            
+            </tr>
+            <tr>
+                <td>类选择器</td>
+            </tr>
+            <tr>
+                <td>通配符</td>
+            </tr>
+            <tr>
+                <td>ID选择器</td>
+            </tr>
+        </table>
+    </p>
+    <code>class</code>、<code>{}</code><br>
+    <p class="google">
+        <span class="blue">G</span>
+        <span class="orange">o</span>
+        <span class="red">o</span>
+        <span class="blue">g</span>
+        <span class="green">l</span>
+        <span class="red">e</span>
+    </p>  
+    <p>
+        
+    </p>
+    <p>
+        CSS中字体:<code>font-size大小</code>、<code>font-family</code>可以有多个字体, 使用, 隔开; 
+        字体粗细<code>font-weight</code>:bold (700) 、normal(400)<br>
+        字体<code>font-style:</code><code>Italic</code>、<code>em(倾斜)</code><code>normal</code><br>
+        文本综合选择器<code>{font:font-style font-weight font-size font-family}</code>空格隔开; 
+    </p>
+    <p>
+        CSS中文本格式:<code>text-allign</code>、<code>text-incident</code>、<code>line-height</code>、<code>text-decoratiion</code>
+    </p>
+    <p>CSS快捷方式:把握各部分关系, tap一下: <code>+并列</code>、<code>>从属</code>、<code>li*3/4/5</code>、<code>.demo(class="")</code>、<code>$(.demo$*4/5/6)</code>
+    </p>
+</section>
+<section class="fix">
+        <h2>⭐ CSS selectors</h2>
+        <ul>
+            <li>复合选择器(descendant combinator):<code>selector1 selector2{}</code>: select all siblings of selector1 that match selector2.</li>
+            <li>交集选择器: <code>selector1.()selector2</code>, eg:p.red{},没有空格</li>
+            <li>并集选择器: <code>selector1,(和)selector2</code></li>
+            <li>伪链接选择器: <code>link</code>、<code>visit</code>、<code>hover</code>、<code>active</code>、<code>顺序为LVHA</code></li>
+        </ul>
+</section>
+<section class="fix">
+    <h2>🌙 CSS background</h2>
+    <ul>
+        <li>background set:<code>background-color</code>、<code>background-position</code>(<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background position reference</a> )、<code>background-clip</code>.</li>
+        <li>交集选择器: <code>selector1.()selector2</code>, eg:p.red{},没有空格</li>
+        <li>并集选择器: <code>selector1,(和)selector2</code></li>
+        <li>伪链接选择器: <code>link</code>、<code>visit</code>、<code>hover</code>、<code>active</code>、<code>顺序为LVHA</code></li>
+    </ul>
+</section>
+<section class="fix">
+    <h2>HTML布局</h2>
+    利用三角形组建多种图形
+    <div class="box1">
+        tri 
+    </div>
+</section>
+<section class="fix">
+    <h2>定位</h2>
+    常见三种定位及使用
+    <ul>
+        <li><code>relative </code></li>
+        <li><code>absolute </code></li>
+        <li><code>fixed </code></li>
+    </ul>
+    多级定位遵循:<code>子绝父相</code>
+    </div>
+</section>
+<section class="fix">
+    <div>
+        <h2>Java Basic summery</h2>
+        <ul>
+            <li><code>语句</code>JS程序的单位是行,每一行就是一个语句;语句以分号结尾；</li>
+            <li><code>标识符identifer</code>识别各种值的合法名称, english status, 最常见的标识符是变量名,标识符由字母、美元符号$、下划线和数字组成(数字不能开头)。</li>
+            <li><code>变量var</code>用于assign值,</li>
+            <li><code>JS文件引入到文件的三种方式</code>:直接嵌入到html body中;在body中引入独立的JS文件资源<code><script src=""></script></code>,</li>
+            <li><code>JS注释</code>:单行注释\多行注释(/* */); 不同于html(!)和css(/*)的注释；</li>
+            <li><code>输出</code>的三种方式:<code>alert</code>\<code>document.write</code>\<code>console.log</code></li>
+            <li><code>数据类型</code>有6种:原始3种:number\string\布尔类型;  复合类型3种:原始数据类型的组合;</li>
+        </ul>
+        
+    </div>
+    <div>
+        <h1><code>if语句</code></h1>
+
+        <h1><code>循环语句</code></h1>
+
+        <h1><code>String 字符串</code></h1>
+        <p>
+            Generally, String will use <code>"" </code>& <code>''  </code>, If you want to use "" & '' together, you must use <code>\</code> to indicate that they are different. 
+            meanwhile if you want to line feed, you also use <code>\</code>.
+        </p>
+        <h3 style="text-align: center;">
+            tring Attribute & Method
+        </h3>
+        <p>
+            <code>Length</code> will be use to indicate the amount of one string. 
+            The example is below:
+            <img src="imgs/sring-example.png" style="height: 30px; " >
+        </p>
+        <p>
+            <code>CharAt</code>: 查找从0开始的数字位置;代码程序中数字从0开始。The example is below:
+            <img src="imgs/string-chaAt.png" style="height: 30px; " > 如果参数为负或超过字符串长度,打印结果为空
+        </p>
+        <p>
+            <code>Concat</code>:whatever type, it will combine different strings, it won't change the previous string and won't add, also suit to number.
+            The example is below:
+            <img src="imgs/string-concat.png" style="height: 30px; " >
+            <br><code>+</code>可以直接连接string, 更直观简便,有时会相加数字。
+        </p>
+        <p>
+            <code>substring</code>:从原字符串中提取字符串并返回,不改变原来字符串。
+            字符串从1开始数,不是从0开始数。第一个参数表示字符串开始位置,第二个字符串表示结束位置
+            (返回结果不包含最后一个字符串位置)。
+            The example is below:
+            <img src="imgs/string-substring.png" style="height: 30px; " >
+        </p>
+        <p>
+            <code>substr</code>:从原字符串中提取字符串并返回,不改变原来字符串。
+            从0开始计算,第一个参数是子字符串的开始位置,第二个参数是子字符串的长度。
+
+        </p>
+        <p>
+            <code>indexOf</code>: 常用于搜索和判断目标内容是否存在,会和if语句结合使用。
+            The example is below:
+            <img src="imgs/string-indexOf.png" style="height: 30px; " >
+        </p>
+        <p>
+            <code>trim</code>: 用于去除字符串两端的空格(中间空格去不掉),返回一个新字符串,不改变原来字符串。
+        </p>
+        <p>
+            <code>split</code>: 分割字符串,用<code>""</code>或<code>|</code>切割,新字符串用 [] 表示。
+           
+        </p>
+         
+        
+        
+
+        <h1><code>Array 数组</code></h1>
+        <p>
+            <code>Length</code> will be use to indicate the amount of  one array.The example is below:
+            <img src="imgs/array-attribute.png" style="height: 30px; " >
+        </p> 
+        <p>
+            数组的遍历:this method will use for loop or while loop or for...in 
+        </p>
+        <p>
+            数组<code>Array.isarray(arr)</code>静态方法:表示参数是否为数组,结果为true or false.
+            The example is below:
+            <img src="imgs/array-Array.isArray.png" style="height: 30px; " >
+        </p>
+        <p>
+            数组<code>push()/pop()</code>方法:用于在数组的末端添加/删除一个或多个元素,并返回添加新元素后的数组长度,会改变原数组.
+            The example is below:
+            <img src="imgs/array-push.png" style="height: 30px; " >
+        </p>
+        <p>
+            数组<code>shift()/unshift</code>方法:用于删除/添加数组的第一个元素,并返回该元素,会改变原数组.
+            The example is below:
+            <img src="imgs/array-push.png" style="height: 30px; " >
+        </p>
+        <p>
+            数组<code>jion</code>方法:以指定参数作为分隔符,将所有数组成员作为一个字符串返回。如果不提供参数,默认用逗号分隔。
+            常与<code>split</code>连用,实现字符串和数组的转换.如果数组中包含<code>null</code>和<code>undefined</code>,在转换过程中会转化为空字符串。
+            The example is below:
+            <img src="imgs/array-join.png" style="height: 30px; " >
+        </p>
+        <p>
+            数组<code>concat</code>方法:合并一维或二维数组为同一个数组。
+            The example is below:
+            <img src="imgs/array-concat.png" style="height: 30px; " >
+        </p>
+        <p>
+            数组<code>reverse</code>方法:可以颠倒排列数组元素,返回改变后的数组,会改变原数组。
+            数组和字符串之间可以穿插转换应用。
+        </p>
+
+        <h1>Math</h1>
+        <div>
+            <ul>
+                <li><code>math.abs</code>:获取绝对值</li>
+                <li><code>math.max/math.min</code></li>
+                <li><code>math.floor/math.ceil</code>:向上/向下取整</li>
+                <li><code>math.random</code>随机数</li>
+                <li></li>
+            </ul>
+        </div>
+        <h1>变量声明</h1>
+        <div>
+            <ul>
+                <li><code>let</code>：块级作用域、不存在变量提升，</li>
+                <li><code>const常量</code>：声明的时候直接初始化,不可以改变,块级作用域,不可以提升,不可以重复声明</li>
+                <li>变量的解构赋值 </li>
+            </ul>
+        </div>
+
+        <h1><code>函数:(模具),可以反复调用的代码块</code></h1>
+
+        <h1><code>DOM:doucument object model</code></h1>
+        <p>DOM 是Javascript操作网页的接口, 可以将网页转化为Javascipt对象,从而用脚本进行各种操作。
+            DOM只是一个接口规范,可以用各种语言实现。
+            严格说DOM 不是Javascript语法的一部分, 但DOM是Javascrpt最常见的任务,离开了DOM,javascrpt就无法控制网页。
+            DOM最小单位是节点(node),有7种类型:
+        </p>
+        <ol>
+            <li>document:文档树的顶层节点</li>
+            <li>document type: doctype标签</li>
+            <li>element:网页的各种html标签</li>
+            <li>attribute:网页元素的属性</li>
+            <li>text: 标签之间或标签包含的文本</li>
+            <li>comment:注释</li>
+            <li>documentfragment:文档的片段</li>
+        </ol>
+        
+        <code>事件处理程序</code>有三类：
+        HTML事件处理
+        DOM0级事件处理
+        DOM2级事件处理
+
+    </div>
+</section>
+
+
+
+-----------------
+-----------------
+<p style="border: 1px solid black;">This is the first block element</p>
+<p style="border: 1px solid black;">
+    This is the second block element <span style="color: red;">this is a inline element.</span>
+    <span style="color: red;">this is a inline element.</span> <span style="color: red;">this is a inline element.</span> <span style="color: red;">this is a inline element.</span> <span style="color: red;">this is a inline element.</span> <span style="color: red;">this is a inline element.</span>
+</p>
+<img src="imgs/starnight.webp" style="width: 200px; height: 200px; border-radius: 100px;">
+<img src="imgs/starnight.webp" style="width: 200px; border-radius: 5px;">
+<img class="fit-picture" src="imgs/starnight.webp" style="width:200px; height: 150px;" alt="grapefruit slice atop a pile of other slices">
+<section>
+    <p>
+        This is a box with a border around it. Note which side of the box is
+        <span class="redtext">red</span>.
+    </p>
+</section>
+
+<div class="demo"></div>
+<div id="booster"></div>
+<div class="demo1"></div>
+<div class="demo2"></div>
+<div class="demo3"></div>
+<div class="demo4"></div>
+<div></div>
+
+
+
+
+<div>
+    <input type="text" id="username">
+    <button type="button" style="width:100px;" onclick="btnclick()">Go</button>
+    <p id="display"></p>
+</div>
+<img src="imgs/forloop.jpg" style="width: 300px; max-width: 100%;">
+
+</main>
+
+<div class="footer-copyright text-center py-3">© 2022 Copyright: 😘<a href="http://dpzhai.com" class="mya">dpzhai.com</a></div>
+
+</body>
+</html> 

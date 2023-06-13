@@ -1,0 +1,58 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+a {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-decoration: none;
+
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.mya {
+    color: #007bff;
+    transition: background-color .2s ease-out;
+    background-color:hsla(209,100%,52%,.05);
+    border-radius: 5px;
+    padding: 0 .2em;
+    margin: 0 .2em;
+    text-decoration: none;
+}
+.mya:hover{
+    background-color:hsla(50,100%,50%,.51);
+    color:#806a00;
+    text-decoration: none
+}
+a.anchor{
+    display: block;
+    visibility: hidden
+}
+
+figure {
+    margin: 1rem auto;
+}
+figure img {
+    width: 100%;
+}
+figcaption {
+    text-align: center;
+    color: #65647C;
+    font-size: 0.9em;
+}
