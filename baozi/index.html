@@ -25,23 +25,9 @@ html {
     font-size: 18px;
     color: #393E46;
 }
-iframe {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-}
-h1, h2, h3 {
-    color: #8EC3B0;
-}
-h2 {
-    margin-top: 2em;
-}
-figcaption {
-    text-align: center;
-    color: #285430;
-}
-.smog strong {
-    color: #FB2576;
+.image {
+    margin: 5px;
+    border-radius: 3px;
 }
 #imageContainer {
     display: flex;
@@ -49,9 +35,17 @@ figcaption {
     justify-content: center;
 }
 
-.image {
-    height: 200px;
-    margin: 10px;
+@media screen and (max-width: 767px) {
+    .image {
+        width: calc(100% - 10px);
+        /* height: 200px; */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .image {
+        height: 200px;
+    }
 }
 </style>
 </head>
@@ -67,15 +61,10 @@ figcaption {
 </p>
 
 
-<div class="container-fluid">
-    <div class="row" id="imageContainer">
-      <div class="col-12 col-sm-6 col-md-4">
-        <img class="image" src="IMG_2233.jpg" alt="Image 1">
-      </div>
-      <div class="col-12 col-sm-6 col-md-4">
-        <img class="image" src="IMG_2228.jpg" alt="Image 2">
-      </div>
-    </div>
+<div id="imageContainer">
+    <img class="image" src="IMG_2233.jpg" alt="Image 1">
+    <img class="image" src="IMG_2228.jpg" alt="Image 2">
+    <img class="image" src="baozi.jpg" alt="Image 3">
 </div>
 
 <p>
